@@ -34,6 +34,7 @@ public:
     }
 
 
+
     int getData(int pos) const {
         return data[pos];
     }
