@@ -1,23 +1,19 @@
 //
-// Created by Aarón Escobar on 11/08/26.
+// Created by Aarón Escobar on 14/08/26.
 //
-#include <iostream>
+#pragma once
 
 using namespace std;
+#include <iostream>
 
 const int MAX = 100;
 
-class Lista {
-private:
-    int data[MAX];
-    int size;
-
+template <class T>
+class ListT {
 public:
-    Lista() {
-        size = 0;
-    };
+    ListT();
 
-    void insert(int value) {
+    void insert(T value) {
         if (size < MAX) {
             data[size] = value;
             size++;
@@ -29,15 +25,13 @@ public:
     void erase() {
         if (size > 0) {
             std::cout << data[size - 1] << std::endl;
-
         }
     }
 
-    int getData(int pos) const {
-        return data[pos];
+    T getData(int pose) const{
+        return data[pose];
     }
 
-    // usamos el const para no modificar la estructura dentro
     int getSize() const {
         return size;
     }
@@ -48,16 +42,8 @@ public:
         }
     }
 
+private:
+    T data[MAX];
+    int size;
+
 };
-
-
-int main() {
-    Lista lista;
-
-    lista.insert(154);
-    lista.insert(587);
-    lista.insert(874);
-
-    lista.print();
-
-}
