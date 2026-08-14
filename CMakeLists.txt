@@ -3,8 +3,8 @@ project(TC1031)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(Actividad_AG01
-        Semana1/AG01/List.cpp
-        Semana1/AG01/ListT.cpp
-        Semana1/AG01/ListT.h
-)
+# Target 1: Semana 1 - AG01
+add_executable(AG01_List Semana1/AG01/List.cpp)
+
+# Target 2: Semana 1 - AG01-1
+add_executable(AG01_ListT Semana1/AG01-1/ListT.cpp Semana1/AG01-1/ListT.h)
